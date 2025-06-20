@@ -1,0 +1,25 @@
+{
+  "dfx": "0.27.0",
+  "canisters": {
+    "chainjournal_backend": {
+      "main": "src/chainjournal_backend/main.mo",
+      "type": "motoko"
+    },
+    "chainjournal_frontend": {
+      "type": "assets",
+      "source": ["src/chainjournal_frontend"]
+    }
+  },
+  "defaults": {
+    "build": {
+      "packtool": ""
+    }
+  },
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:4943",
+      "type": "ephemeral"
+    }
+  },
+  "version": 1
+}
