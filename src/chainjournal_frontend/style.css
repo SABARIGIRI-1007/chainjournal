@@ -1,76 +1,85 @@
-/* Reset some defaults */
-* {
-  box-sizing: border-box;
+body {
   margin: 0;
   padding: 0;
-}
-
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #f2f4f8;
-  padding: 2rem;
-  display: grid;
+  height: 100vh;
+  background-image: url('https://i.pinimg.com/originals/5a/cd/c8/5acdc8d4d898277dc853157180e566d5.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
   justify-content: center;
-  align-items: flex-start;
-  min-height: 100vh;
+  align-items: center;
+  font-family: Arial, sans-serif;
 }
 
-.container {
-  background: #fff;
-  padding: 2rem;
-  border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 600px;
-}
-
-h1 {
+.journal-box {
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 40px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
   text-align: center;
-  margin-bottom: 1.5rem;
-  color: #333;
+  width: 400px;
 }
 
 input[type="text"] {
   width: 100%;
-  padding: 0.75rem;
-  font-size: 1rem;
-  border: 1px solid #ccc;
+  padding: 12px;
+  margin-top: 20px;
+  border: none;
   border-radius: 10px;
-  margin-bottom: 1rem;
-  transition: border 0.3s;
-}
-
-input[type="text"]:focus {
-  border-color: #007acc;
+  font-size: 16px;
   outline: none;
 }
 
 button {
   width: 100%;
-  padding: 0.75rem;
-  background: #007acc;
-  color: white;
+  padding: 12px;
+  margin-top: 20px;
   border: none;
   border-radius: 10px;
-  font-size: 1rem;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: background-color 0.3s;
 }
 
 button:hover {
-  background: #005fa3;
+  background-color: #0056b3;
+}
+
+#entries {
+  margin-top: 20px;
 }
 
 .entry {
-  background: #f9f9f9;
-  border-left: 4px solid #007acc;
-  padding: 1rem;
-  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  margin-top: 10px;
+  padding: 10px;
   border-radius: 10px;
+  color: white;
 }
 
-.timestamp {
-  font-size: 0.8rem;
-  color: #888;
-  margin-top: 0.5rem;
+.entry span {
+  flex-grow: 1;
+  word-wrap: break-word;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  color: #ff4d4d;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 4px;
+  margin-left: 10px;
+  transition: transform 0.2s;
+}
+
+.delete-btn:hover {
+  transform: scale(1.2);
 }
